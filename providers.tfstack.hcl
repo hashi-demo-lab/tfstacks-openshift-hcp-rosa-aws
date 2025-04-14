@@ -21,7 +21,7 @@ required_providers {
     source = "hashicorp/null"
     version = "~> 3.0"
   }
-  rhcss = {
+  rhcs = {
     source = "terraform-redhat/rhcs"
     version = "~> 1.6"
   }
