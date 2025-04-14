@@ -14,7 +14,7 @@ deployment "rosa_development" {
     role_arn            = "arn:aws:iam::855831148133:role/tfstacks-role"
     region             = "ap-southeast-1"
     rhcs_token        = store.varset.openshift_rosa.rhcs_token
-    cidr_block          = "10.0.0.0/16"
+    cidr_block          = "10.200.0.0/16"
     public_subnets      = ["subnet-0c0eca1ee285e4177","subnet-0874f2ae2f9c50df2","subnet-0e88e26f5d4ef35ed"]
     private_subnets = ["subnet-0c0eca1ee285e4177","subnet-0874f2ae2f9c50df2","subnet-0e88e26f5d4ef35ed",]
     availability_zones  = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
