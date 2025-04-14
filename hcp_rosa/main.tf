@@ -1,6 +1,8 @@
+
+
 module "hcp" {
   source  = "terraform-redhat/rosa-hcp/rhcs"
-  version = "1.6.5"
+  version = "1.6.6-prerelease.2"
 
   cluster_name           = var.cluster_name
   openshift_version      = var.openshift_version
@@ -22,7 +24,7 @@ module "hcp" {
 ############################
 module "htpasswd_idp" {
   source  = "terraform-redhat/rosa-hcp/rhcs//modules/idp"
-  version = "1.6.5"
+  version = "1.6.6-prerelease.2"
 
   cluster_id         = module.hcp.cluster_id
   name               = var.htpasswd_idp_name
