@@ -22,7 +22,7 @@ component "hcp_rosa" {
 
   providers = {
     aws    = provider.aws.configurations
-    rhcss  = provider.rhcss.this
+    rhcs  = provider.rhcs.this
     time = provider.time.this
     random = provider.random.this
     null = provider.null.this

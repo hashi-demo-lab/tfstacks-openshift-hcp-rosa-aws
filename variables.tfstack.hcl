@@ -8,6 +8,10 @@ variable "aws_identity_token" {
   sensitive = true
 }
 
+variable "role_arn" {
+  type = string
+}
+
 variable "rhcs_token" {
   type = string
   sensitive = true
