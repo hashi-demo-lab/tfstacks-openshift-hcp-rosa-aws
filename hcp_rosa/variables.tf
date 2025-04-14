@@ -29,7 +29,6 @@ variable "rhcs_token" {
 variable "cluster_name" {
   description = "Name of the ROSA HCP cluster"
   type        = string
-  default     = "my-cluster"
 }
 
 variable "openshift_version" {
@@ -41,13 +40,11 @@ variable "openshift_version" {
 variable "account_role_prefix" {
   description = "Prefix for AWS IAM account roles"
   type        = string
-  default     = "my-cluster-account"
 }
 
 variable "operator_role_prefix" {
   description = "Prefix for AWS IAM operator roles"
   type        = string
-  default     = "my-cluster-operator"
 }
 
 variable "replicas" {
