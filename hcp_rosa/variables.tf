@@ -65,7 +65,3 @@ variable "htpasswd_username" {
   default     = "test-user"
 }
 
-variable "aws_billing_account_id" {
-  description = "AWS Billing Account ID for the cluster"
-  type        = string
-}
