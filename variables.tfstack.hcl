@@ -15,7 +15,7 @@ variable "role_arn" {
 variable "rhcs_token" {
   type = string
   sensitive = true
-  ephemeral = true
+  ephemeral = false
 }
 
 variable "cidr_block" {
