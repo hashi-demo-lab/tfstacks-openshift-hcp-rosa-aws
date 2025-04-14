@@ -60,4 +60,3 @@ provider "rhcs" "this" {
 provider "random" "this" {}
 provider "time" "this" {} 
 provider "null" "this" {}
-provider "rhcs" "this" {}
