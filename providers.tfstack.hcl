@@ -41,6 +41,12 @@ provider "aws" "configurations" {
   }
 }
 
+provider "rhcs" "this" {
+  config {
+    token  = var.rhcs_token
+  }
+}
+
 # provider "kubernetes" "configurations" {
 #   for_each = var.regions
 #   config { 
@@ -54,4 +60,4 @@ provider "aws" "configurations" {
 provider "random" "this" {}
 provider "time" "this" {} 
 provider "null" "this" {}
-provider "rhcss" "this" {}
+provider "rhcs" "this" {}
