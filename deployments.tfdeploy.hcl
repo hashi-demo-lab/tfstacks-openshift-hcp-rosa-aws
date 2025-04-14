@@ -12,7 +12,7 @@ deployment "rosa_development" {
   inputs = {
     aws_identity_token = identity_token.aws.jwt
     role_arn            = "arn:aws:iam::855831148133:role/tfstacks-role"
-    regions             = ["ap-southeast-1"]
+    region             = "ap-southeast-1"
     rhcs_token        = store.varset.openshift_rosa.RHCS_TOKEN
     cidr_block          = "10.0.0.0/16"
     public_subnets      = ["subnet-0c0eca1ee285e4177","subnet-0874f2ae2f9c50df2","subnet-0e88e26f5d4ef35ed"]
