@@ -8,7 +8,7 @@ store "varset" "openshift_rosa" {
 }
 
 
-deployment "rosa_development" {
+deployment "openshift_rosa_dev" {
   inputs = {
     aws_identity_token = identity_token.aws.jwt
     role_arn            = "arn:aws:iam::855831148133:role/tfstacks-role"
