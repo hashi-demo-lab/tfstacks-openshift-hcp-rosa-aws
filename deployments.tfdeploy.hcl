@@ -19,7 +19,7 @@ deployment "rosa_development" {
     private_subnets = ["subnet-0c0eca1ee285e4177","subnet-0874f2ae2f9c50df2","subnet-0e88e26f5d4ef35ed",]
     availability_zones  = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
     cluster_name        = "rosa-dev-cluster"
-    openshift_version   = "4.14.24"
+    openshift_version   = "4.18.7"
     account_role_prefix = "devacct"
     operator_role_prefix = "devop"
     replicas           = 2
