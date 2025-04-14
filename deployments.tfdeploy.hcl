@@ -20,9 +20,9 @@ deployment "openshift_rosa_dev" {
     availability_zones  = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
     cluster_name        = "rosa-dev-cluster"
     openshift_version   = "4.18.7"
-    account_role_prefix = "devacct"
-    operator_role_prefix = "devop"
-    replicas           = 2
+    account_role_prefix = "ManagedOpenShift"
+    operator_role_prefix = "ManagedOpenShift"
+    replicas           = 1
     htpasswd_idp_name   = "dev-htpasswd"
     htpasswd_username   = "dev-htadmin" 
 
