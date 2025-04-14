@@ -8,6 +8,11 @@ variable "aws_identity_token" {
   sensitive = true
 }
 
+variable "rhcs_token" {
+  type = string
+  sensitive = true
+}
+
 variable "cidr_block" {
   type = string
 }
