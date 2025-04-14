@@ -17,7 +17,6 @@ deployment "rosa_development" {
     cidr_block          = "10.0.0.0/16"
     public_subnets      = ["subnet-0c0eca1ee285e4177","subnet-0874f2ae2f9c50df2","subnet-0e88e26f5d4ef35ed"]
     private_subnets = ["subnet-0c0eca1ee285e4177","subnet-0874f2ae2f9c50df2","subnet-0e88e26f5d4ef35ed",]
-    rhcs_token        = identity_token.aws.jwt
     availability_zones  = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
     cluster_name        = "rosa-dev-cluster"
     openshift_version   = "4.14.24"
