@@ -1,7 +1,7 @@
 
 
 module "hcp" {
-  source = "github.com:hashi-demo-lab/terraform-rhcs-rosa-hcp"
+  source = "github.com/hashi-demo-lab/terraform-rhcs-rosa-hcp.git"
   #source  = "terraform-redhat/rosa-hcp/rhcs"
   #version = "1.6.6-prerelease.2"
 
