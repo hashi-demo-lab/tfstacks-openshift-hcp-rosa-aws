@@ -20,11 +20,6 @@ component "hcp_rosa" {
     htpasswd_username = var.htpasswd_username
   }
 
-  # output "cluster_api_url" {
-  # description = "URL for the OpenShift API"
-  # value       = component.hcp_rosa.cluster_api_url
-  # }
-
   providers = {
     aws    = provider.aws.configurations
     rhcs  = provider.rhcs.this
