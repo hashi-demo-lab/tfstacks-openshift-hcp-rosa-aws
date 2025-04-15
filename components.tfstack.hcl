@@ -30,3 +30,8 @@ component "hcp_rosa" {
 }
 
 
+output "cluster_api_url" {
+  description = "URL for the OpenShift API"
+  value       = component.hcp_rosa.cluster_api_url
+}
+
