@@ -14,7 +14,7 @@ variable "role_arn" {
 
 variable "rhcs_token" {
   type = string
-  ephemeral = true
+  sensitive = true
 }
 
 variable "aws_billing_account_id" {

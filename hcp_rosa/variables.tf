@@ -22,7 +22,7 @@ variable "availability_zones" {
 variable "rhcs_token" {
   description = "Red Hat Cloud Services API token for ROSA authentication"
   type        = string
-  ephemeral = true
+  sensitive = true
 }
 
 variable "cluster_name" {
