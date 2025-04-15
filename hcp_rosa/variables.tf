@@ -19,12 +19,12 @@ variable "availability_zones" {
   default     = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
 }
 
-variable "rhcs_token" {
-  description = "Red Hat Cloud Services API token for ROSA authentication"
-  type        = string
-  sensitive   = true
-  ephemeral = true
-}
+# variable "rhcs_token" {
+#   description = "Red Hat Cloud Services API token for ROSA authentication"
+#   type        = string
+#   sensitive   = true
+#   #ephemeral = true
+# }
 
 variable "cluster_name" {
   description = "Name of the ROSA HCP cluster"
@@ -65,3 +65,7 @@ variable "htpasswd_username" {
   default     = "test-user"
 }
 
+variable "aws_billing_account_id" {
+  description = "AWS billing account ID for the cluster"
+  type        = string
+}

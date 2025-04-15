@@ -12,6 +12,7 @@ component "hcp_rosa" {
     availability_zones = var.availability_zones
     cluster_name = var.cluster_name
     rhcs_token = var.rhcs_token
+    aws_billing_account_id = var.aws_billing_account_id
     openshift_version = var.openshift_version
     account_role_prefix = var.account_role_prefix
     operator_role_prefix = var.operator_role_prefix

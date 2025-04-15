@@ -17,7 +17,7 @@ module "hcp" {
   create_oidc           = true
   create_operator_roles = true
   operator_role_prefix  = var.operator_role_prefix
-  aws_billing_account_id = "855831148133"
+  aws_billing_account_id = var.aws_billing_account_id
 }
 
 ############################
