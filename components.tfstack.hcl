@@ -33,6 +33,7 @@ component "hcp_rosa" {
 output "openshift_rosa_api_url" {
   description = "OpenShift API URL"
   value       = component.hcp_rosa.cluster_api_url
+  type        = string
 }
 
 
