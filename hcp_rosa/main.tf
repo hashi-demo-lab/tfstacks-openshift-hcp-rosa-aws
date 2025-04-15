@@ -1,8 +1,9 @@
 
 
 module "hcp" {
-  source  = "terraform-redhat/rosa-hcp/rhcs"
-  version = "1.6.6-prerelease.2"
+  source = "github.com:hashi-demo-lab/terraform-rhcs-rosa-hcp"
+  #source  = "terraform-redhat/rosa-hcp/rhcs"
+  #version = "1.6.6-prerelease.2"
 
   cluster_name           = var.cluster_name
   openshift_version      = var.openshift_version
