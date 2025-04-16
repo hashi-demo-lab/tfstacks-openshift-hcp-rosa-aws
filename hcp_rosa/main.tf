@@ -14,6 +14,7 @@ module "hcp" {
 
   // STS configuration
   create_account_roles  = true
+  create_admin_user   = true
   account_role_prefix   = var.account_role_prefix
   create_oidc           = true
   create_operator_roles = true
