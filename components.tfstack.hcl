@@ -29,6 +29,17 @@ component "hcp_rosa" {
   }
 }
 
+component "terraform_oidc" {
+
+  source = "./k8s-rbac"
+    inputs = {
+    cluster_endpoint = component.hcp_rosa.cluster_api_url
+    tfc_organization_name = var.tfc_organization_name
+  }
+
+}
+
+
 
 output "openshift_rosa_api_url" {
   description = "OpenShift API URL"
