@@ -3,5 +3,5 @@
 # }
 
 output "namespaces" {
-  value = data.kubernetes_all_namespaces.allns.namespaces
+  value = data.kubernetes_namespace.example
 }
