@@ -26,6 +26,7 @@ deployment "openshift_rosa_dev" {
     replicas           = 1
     htpasswd_idp_name   = "dev-htpasswd"
     htpasswd_username   = "dev-htadmin" 
+    tfc_organization_name = "hashi-demos-apj"
 
   }
 }

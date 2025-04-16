@@ -33,10 +33,13 @@ component "terraform_oidc" {
 
   source = "./k8s-rbac"
     inputs = {
-    cluster_endpoint = component.hcp_rosa.cluster_api_url
-    tfc_organization_name = var.tfc_organization_name
-  }
+      cluster_endpoint = component.hcp_rosa.cluster_api_url
+      tfc_organization_name = var.tfc_organization_name
+    }
 
+    providers = {
+      kubernetes = provider.kubernetes.config
+    }
 }
 
 
