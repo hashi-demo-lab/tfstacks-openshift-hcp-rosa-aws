@@ -51,5 +51,10 @@ output "openshift_rosa_api_url" {
   type        = string
 }
 
+output "cluster_console_url" {
+  description = "OpenShift Cluster Console URL"
+  value       = component.hcp_rosa.cluster_console_url
+  type        = string
+}
 
 
