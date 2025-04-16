@@ -6,7 +6,7 @@ required_providers {
 
   kubernetes = {
     source  = "hashicorp/kubernetes"
-    version = "~> 2.25"
+    version = "~> 2.3"
   }
 
   time = {
@@ -47,15 +47,14 @@ provider "rhcs" "this" {
   }
 }
 
-# provider "kubernetes" "configurations" {
-#   for_each = var.regions
-#   config { 
-#     host                   = component.eks[each.value].cluster_endpoint
-#     cluster_ca_certificate = base64decode(component.eks[each.value].cluster_certificate_authority_data)
-#     token   = component.eks[each.value].eks_token
-#   }
-# }
-#provider "kubernetes" "this" {}
+provider "kubernetes" "config" {
+  config { 
+    host = component.hcp_rosa.cluster_api_url
+    username = component.hcp_rosa.cluster_admin_username
+    password = component.hcp_rosa.cluster_admin_password
+  }
+}
+
 
 provider "random" "this" {}
 provider "time" "this" {} 
