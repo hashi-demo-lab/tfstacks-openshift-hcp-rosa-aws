@@ -72,3 +72,7 @@ variable "tfc_organization_name" {
   description = "The name of the Terraform Cloud organization"
 }
 
+variable "cluster_admin_password" {
+  type = string
+  description = "The password for the cluster admin user"
+}
