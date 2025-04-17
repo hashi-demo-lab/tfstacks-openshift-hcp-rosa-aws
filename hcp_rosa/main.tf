@@ -22,18 +22,18 @@ module "hcp" {
   aws_billing_account_id = var.aws_billing_account_id
 }
 
-############################
-# HTPASSWD IDP
-############################
-module "htpasswd_idp" {
-  source  = "terraform-redhat/rosa-hcp/rhcs//modules/idp"
-  version = "1.6.6-prerelease.2"
+# ############################
+# # HTPASSWD IDP
+# ############################
+# module "htpasswd_idp" {
+#   source  = "terraform-redhat/rosa-hcp/rhcs//modules/idp"
+#   version = "1.6.6-prerelease.2"
 
-  cluster_id         = module.hcp.cluster_id
-  name               = var.htpasswd_idp_name
-  idp_type           = "htpasswd"
-  htpasswd_idp_users = [{ username = var.htpasswd_username, password = random_password.password.result }]
-}
+#   cluster_id         = module.hcp.cluster_id
+#   name               = var.htpasswd_idp_name
+#   idp_type           = "htpasswd"
+#   htpasswd_idp_users = [{ username = var.htpasswd_username, password = random_password.password.result }]
+# }
 
 resource "random_password" "password" {
   length      = 14

@@ -25,7 +25,7 @@ deployment "openshift_rosa_dev" {
     operator_role_prefix = "ManagedOpenShift"
     replicas           = 1
     htpasswd_idp_name   = "dev-htpasswd"
-    htpasswd_username   = "dev-htadmin" 
+    htpasswd_username   = "cluster-admin" 
     tfc_organization_name = "hashi-demos-apj"
 
   }
