@@ -74,5 +74,6 @@ variable "tfc_organization_name" {
 
 variable "cluster_admin_password" {
   type = string
+  ephemeral = true
   description = "The password for the cluster admin user"
 }
