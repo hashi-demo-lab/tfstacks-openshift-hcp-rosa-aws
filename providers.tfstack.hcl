@@ -50,7 +50,7 @@ provider "rhcs" "this" {
 provider "kubernetes" "config" {
   config { 
     host = component.hcp_rosa.cluster_api_url
-    username = "cluster-admin"
+    username = "cluster-admin/api-b7k4y6g3t8e7y8r-p09d-p3-openshiftapps-com:443"
     password = var.cluster_admin_password
   }
 }
