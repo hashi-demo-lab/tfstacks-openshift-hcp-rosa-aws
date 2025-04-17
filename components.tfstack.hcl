@@ -40,9 +40,12 @@ component "terraform_oidc" {
 
     providers = {
       kubernetes = provider.kubernetes.config
+      aws    = provider.aws.configurations
     }
 }
 
+
+# Outputs
 
 
 output "openshift_rosa_api_url" {
@@ -54,6 +57,12 @@ output "openshift_rosa_api_url" {
 output "cluster_console_url" {
   description = "OpenShift Cluster Console URL"
   value       = component.hcp_rosa.cluster_console_url
+  type        = string
+}
+
+output "cluster_id" {
+  description = "OpenShift Cluster ID"
+  value       = component.hcp_rosa.cluster_id
   type        = string
 }
 

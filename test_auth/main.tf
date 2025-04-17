@@ -30,3 +30,6 @@ output "namespace" {
 # │   with data.kubernetes_namespace.default,
 # │   on main.tf line 18, in data "kubernetes_namespace" "default":
 # │   18: data "kubernetes_namespace" "default" {
+
+
+
