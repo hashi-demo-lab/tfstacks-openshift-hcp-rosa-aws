@@ -57,4 +57,13 @@ output "cluster_console_url" {
   type        = string
 }
 
+output "oidc_endpoint_url" {
+  description = "OpenShift OIDC Endpoint URL"
+  value       = component.hcp_rosa.oidc_endpoint_url
+  type        = string
+}
+
+
+
+
 
