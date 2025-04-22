@@ -25,8 +25,12 @@ required_providers {
     source = "terraform-redhat/rhcs"
     version = "~> 1.6"
   }
-  
 
+  http = {
+    source = "hashicorp/http"
+    version = "~> 3.0"
+  }
+  
 }
 
 provider "aws" "configurations" {
