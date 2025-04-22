@@ -55,6 +55,18 @@ output "openshift_rosa_api_url" {
   type        = string
 }
 
+output "cluster_admin_password" {
+  description = "OpenShift Cluster Admin Password"
+  value       = component.hcp_rosa.cluster_admin_password
+  type        = string
+}
+output "cluster_admin_username" {
+  description = "OpenShift Cluster Admin Username"
+  value       = component.hcp_rosa.cluster_admin_username
+  type        = string
+}
+
+
 output "cluster_console_url" {
   description = "OpenShift Cluster Console URL"
   value       = component.hcp_rosa.cluster_console_url

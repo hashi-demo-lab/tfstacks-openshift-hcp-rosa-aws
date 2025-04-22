@@ -30,7 +30,7 @@ data "aws_eks_cluster_auth" "openshift" {
 
 
 data "http" "openshift_auth" {
-  url = "${module.hcp.cluster_api_url}/oauth/authorize"
+  url = "${module.hcp.cluster_api_url}/default/oauth/authorize"
 
   # Using STS token for authentication
   request_headers = {
