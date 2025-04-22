@@ -73,6 +73,11 @@ output "oidc_endpoint_url" {
   type        = string
 }
 
+output "auth_result" {
+  description = "OpenShift authentication result"
+  value       = component.hcp_rosa.auth_result
+  type        = string
+}
 
 
 
