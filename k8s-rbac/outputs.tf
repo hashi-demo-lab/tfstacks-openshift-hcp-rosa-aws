@@ -5,3 +5,8 @@
 # output "namespaces" {
 #   value = data.kubernetes_namespace.example
 # }
+
+# output "token" {
+#   value = data.aws_eks_cluster_auth.example.token
+#   description = "The token for accessing the EKS cluster"
+# }

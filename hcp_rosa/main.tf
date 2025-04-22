@@ -22,6 +22,15 @@ module "hcp" {
   aws_billing_account_id = var.aws_billing_account_id
 }
 
+#
+# OpenShift Rosa on AWS uses STS, aws_eks_cluster_auth is used to generate a short term STS token using cluster_id
+data "aws_eks_cluster_auth" "example" {
+   name =  module.hcp.cluster_id
+}
+
+
+
+
 # ############################
 # # HTPASSWD IDP
 # ############################
@@ -43,3 +52,5 @@ resource "random_password" "password" {
   min_special = 1
   min_upper   = 1
 }
+
+

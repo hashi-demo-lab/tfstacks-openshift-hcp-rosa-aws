@@ -25,6 +25,7 @@ output "cluster_console_url" {
   value       = module.hcp.cluster_console_url
 }
 
+
 output "cluster_api_url" {
   description = "URL for the OpenShift API"
   value       = module.hcp.cluster_api_url
@@ -49,4 +50,9 @@ output "htpasswd_password" {
   description = "Generated password for HTPasswd authentication"
   value       = random_password.password.result
   sensitive   = true
+}
+
+output "sts_token" {
+  value = data.aws_eks_cluster_auth.upstream_auth.token
+  sensitive = true
 }
