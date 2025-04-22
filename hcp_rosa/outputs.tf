@@ -60,10 +60,10 @@ output "sts_token" {
   sensitive = true
 }
 
-output "ocm_properties" {
-  value = data.rhcs_cluster_rosa_hcp.cluster.ocm_properties
-  description = "OCM properties for the cluster"
-}
+# output "ocm_properties" {
+#   value = data.rhcs_cluster_rosa_hcp.cluster.ocm_properties
+#   description = "OCM properties for the cluster"
+# }
 
 
 output "auth_result" {

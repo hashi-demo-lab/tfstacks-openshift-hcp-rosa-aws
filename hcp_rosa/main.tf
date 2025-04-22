@@ -39,7 +39,3 @@ data "http" "openshift_auth" {
   }
 }
 
-
-data "rhcs_cluster_rosa_hcp" "cluster" {
-  id = module.hcp.cluster_id
-}
