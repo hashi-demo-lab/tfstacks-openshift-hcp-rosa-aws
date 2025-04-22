@@ -61,7 +61,7 @@ output "sts_token" {
 }
 
 output "ocm_properties" {
-  value = rhcs_cluster_rosa_hcp.cluster[0].properties
+  value = data.rhcs_cluster_rosa_hcp.cluster[0].properties
   description = "OCM properties for the cluster"
 }
 
