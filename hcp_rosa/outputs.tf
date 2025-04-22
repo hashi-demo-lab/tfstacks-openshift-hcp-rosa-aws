@@ -14,6 +14,8 @@ output "cluster_admin_username" {
   sensitive   = true
 }
 
+
+
 output "cluster_admin_password" {
   value       = module.hcp.cluster_admin_password
   description = "The password of the admin user."
@@ -57,3 +59,5 @@ output "sts_token" {
   description = "STS token for authentication"
   sensitive = true
 }
+
+

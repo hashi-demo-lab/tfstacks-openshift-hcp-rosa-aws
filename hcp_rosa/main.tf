@@ -29,6 +29,22 @@ data "aws_eks_cluster_auth" "openshift" {
 }
 
 
+data "http" "openshift_auth" {
+  url = "${module.hcp.cluster_api_url}/oauth/authorize"
+
+  # For token-based authentication, you would use:
+  request_headers = {
+    Authorization = "Bearer ${data.aws_eks_cluster_auth.openshift.token}"
+    Accept        = "application/json"
+  }
+}
+
+#Output the authentication result
+output "auth_result" {
+  value = jsondecode(data.http.openshift_auth.response_body)
+  sensitive = true
+}
+
 
 
 # ############################

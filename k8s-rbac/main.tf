@@ -1,11 +1,11 @@
 
 # odic-identity pre-requisite
 
-data "kubernetes_namespace" "example" {
-  metadata {
-    name = "kube-system"
-  }
-}
+# data "kubernetes_namespace" "example" {
+#   metadata {
+#     name = "kube-system"
+#   }
+# }
 
 # data "aws_eks_cluster_auth" "example" {
 #   name =  "2i6vh00537t32a8d9igh8hgo10dpijt5"
