@@ -24,7 +24,7 @@ module "hcp" {
 
 #
 # OpenShift Rosa on AWS uses STS, aws_eks_cluster_auth is used to generate a short term STS token using cluster_id
-data "aws_eks_cluster_auth" "example" {
+data "aws_eks_cluster_auth" "openshift" {
    name =  module.hcp.cluster_id
 }
 

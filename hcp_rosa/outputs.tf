@@ -53,6 +53,7 @@ output "htpasswd_password" {
 }
 
 output "sts_token" {
-  value = data.aws_eks_cluster_auth.upstream_auth.token
+  value = data.aws_eks_cluster_auth.openshift.token
+  description = "STS token for authentication"
   sensitive = true
 }
