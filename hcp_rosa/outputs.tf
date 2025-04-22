@@ -67,7 +67,7 @@ output "sts_token" {
 
 
 output "auth_result" {
-  value = data.http.openshift_auth.response_body
-  sensitive = true
+  value = nonsensitive(data.http.openshift_auth.response_body)
+  sensitive = false
 }
 
