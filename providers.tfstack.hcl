@@ -59,3 +59,4 @@ provider "kubernetes" "config" {
 provider "random" "this" {}
 provider "time" "this" {} 
 provider "null" "this" {}
+provider "http" "this {}

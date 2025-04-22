@@ -26,6 +26,7 @@ component "hcp_rosa" {
     time = provider.time.this
     random = provider.random.this
     null = provider.null.this
+    http = provider.http.this
   }
 }
 

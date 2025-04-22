@@ -23,6 +23,11 @@ terraform {
       version = "~> 0.13"
     }
 
+    http = {
+      source  = "hashicorp/http"
+      version = "~> 3.0"
+    }
+
   }
   required_version = "~> 1.0"
 }
