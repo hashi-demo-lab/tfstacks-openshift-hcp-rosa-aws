@@ -24,12 +24,19 @@ provider "aws" {
   region = "ap-southeast-1"
 }
 data "aws_eks_cluster_auth" "example" {
-  name =  "2i6vh00537t32a8d9igh8hgo10dpijt5"
+  name =  "2ia9qfuruad03j42cd2ck25r8jp91nmi"
+}
+
+data "aws_eks_cluster" "example" {
+  name = "rosa-dev-cluster"
 }
 
 output "auth" {
   value = nonsensitive(data.aws_eks_cluster_auth.example.token)
-  
+}
+
+output "cluster" {
+  value = nonsensitive(data.aws_eks_cluster.example)
 }
 
 # data "kubernetes_namespace" "default" {
