@@ -27,9 +27,9 @@ data "aws_eks_cluster_auth" "example" {
   name =  "2ia9qfuruad03j42cd2ck25r8jp91nmi"
 }
 
-data "aws_eks_cluster" "example" {
-  name = "rosa-dev-cluster"
-}
+# data "aws_eks_cluster" "example" {
+#   name = "rosa-dev-cluster"
+# }
 
 output "auth" {
   value = nonsensitive(data.aws_eks_cluster_auth.example.token)

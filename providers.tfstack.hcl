@@ -51,8 +51,8 @@ provider "kubernetes" "config" {
   config { 
     host = component.hcp_rosa.cluster_api_url
     token = component.hcp_rosa.sts_token
-    username = component.hcp_rosa.cluster_admin_username
-    password = component.hcp_rosa.cluster_admin_password
+    insecure_skip_tls_verify = true
+    
   }
 }
 
