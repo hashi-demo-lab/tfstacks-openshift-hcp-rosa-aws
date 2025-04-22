@@ -40,10 +40,6 @@ data "http" "openshift_auth" {
 }
 
 #Output the authentication result
-output "auth_result" {
-  value = jsondecode(data.http.openshift_auth.response_body)
-  sensitive = true
-}
 
 
 
