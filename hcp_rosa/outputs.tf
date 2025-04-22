@@ -43,16 +43,16 @@ output "oidc_endpoint_url" {
   value       = module.hcp.oidc_endpoint_url
 }
 
-output "htpasswd_username" {
-  description = "Username for HTPasswd authentication"
-  value       = var.htpasswd_username
-}
+# output "htpasswd_username" {
+#   description = "Username for HTPasswd authentication"
+#   value       = var.htpasswd_username
+# }
 
-output "htpasswd_password" {
-  description = "Generated password for HTPasswd authentication"
-  value       = random_password.password.result
-  sensitive   = true
-}
+# output "htpasswd_password" {
+#   description = "Generated password for HTPasswd authentication"
+#   value       = random_password.password.result
+#   sensitive   = true
+# }
 
 output "sts_token" {
   value = data.aws_eks_cluster_auth.openshift.token
