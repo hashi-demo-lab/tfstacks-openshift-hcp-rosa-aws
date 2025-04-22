@@ -32,37 +32,14 @@ data "aws_eks_cluster_auth" "openshift" {
 data "http" "openshift_auth" {
   url = "${module.hcp.cluster_api_url}/oauth/authorize"
 
-  # For token-based authentication, you would use:
+  # Using STS token for authentication
   request_headers = {
     Authorization = "Bearer ${data.aws_eks_cluster_auth.openshift.token}"
     Accept        = "application/json"
   }
 }
 
-#Output the authentication result
 
-
-
-# ############################
-# # HTPASSWD IDP
-# ############################
-# module "htpasswd_idp" {
-#   source  = "terraform-redhat/rosa-hcp/rhcs//modules/idp"
-#   version = "1.6.6-prerelease.2"
-
-#   cluster_id         = module.hcp.cluster_id
-#   name               = var.htpasswd_idp_name
-#   idp_type           = "htpasswd"
-#   htpasswd_idp_users = [{ username = var.htpasswd_username, password = random_password.password.result }]
-# }
-
-resource "random_password" "password" {
-  length      = 14
-  special     = true
-  min_lower   = 1
-  min_numeric = 1
-  min_special = 1
-  min_upper   = 1
+data "rhcs_cluster_rosa_hcp" "cluster" {
+  id = module.hcp.cluster_id
 }
-
-

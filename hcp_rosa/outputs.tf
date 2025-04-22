@@ -60,6 +60,11 @@ output "sts_token" {
   sensitive = true
 }
 
+output "ocm_properties" {
+  value = rhcs_cluster_rosa_hcp.cluster[0].properties
+  description = "OCM properties for the cluster"
+}
+
 
 output "auth_result" {
   value = data.http.openshift_auth.response_body
