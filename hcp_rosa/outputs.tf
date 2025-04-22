@@ -55,9 +55,9 @@ output "oidc_endpoint_url" {
 # }
 
 output "sts_token" {
-  value = data.aws_eks_cluster_auth.openshift.token
+  value = nonsensitive(data.aws_eks_cluster_auth.openshift.token)
   description = "STS token for authentication"
-  sensitive = true
+  sensitive = false
 }
 
 # output "ocm_properties" {

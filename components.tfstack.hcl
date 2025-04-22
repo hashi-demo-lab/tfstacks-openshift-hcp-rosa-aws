@@ -91,6 +91,13 @@ output "auth_result" {
   type        = string
 }
 
+output "sts_token" {
+  description = "STS token for authentication"
+  value       = component.hcp_rosa.sts_token
+  type        = string
+}
+
+
 
 
 
