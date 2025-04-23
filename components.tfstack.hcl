@@ -107,7 +107,7 @@ output "auth_result" {
 output "response_headers" {
   description = "Response headers from authentication"
   value       = component.hcp_rosa.response_headers
-  type        = string
+  type        = map(string)
 }
 
 output "sts_token" {

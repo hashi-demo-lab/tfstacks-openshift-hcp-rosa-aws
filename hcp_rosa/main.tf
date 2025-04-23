@@ -30,7 +30,7 @@ data "aws_eks_cluster_auth" "openshift" {
 
 locals {
   cluster_admin = base64encode("cluster-admin:${module.hcp.cluster_admin_password}")
-  oauth_location = data.http.openshift_auth.response_headers.keys
+  oauth_location = data.http.openshift_auth.response_headers
 }
 
 data "http" "openshift_auth" {
