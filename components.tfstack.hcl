@@ -66,6 +66,12 @@ output "cluster_admin_username" {
   type        = string
 }
 
+output "cluster_domain" {
+  description = "OpenShift Cluster Domain"
+  value       = component.hcp_rosa.cluster_domain
+  type        = string
+}
+
 
 output "cluster_console_url" {
   description = "OpenShift Cluster Console URL"
