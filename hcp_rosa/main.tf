@@ -35,6 +35,7 @@ locals {
 
 data "http" "openshift_auth" {
   url = "https://oauth.${module.hcp.cluster_domain}/oauth/authorize?client_id=openshift-challenging-client&response_type=token"
+  insecure = true
 
   # base64 encoded
   request_headers = {
