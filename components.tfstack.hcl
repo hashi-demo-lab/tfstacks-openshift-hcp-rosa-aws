@@ -85,6 +85,13 @@ output "cluster_id" {
   type        = string
 }
 
+output "cluster_oauth_url" {
+  description = "OpenShift OAuth URL"
+  value       = component.hcp_rosa.cluster_oauth_url
+  type        = string
+  
+}
+
 output "oidc_endpoint_url" {
   description = "OpenShift OIDC Endpoint URL"
   value       = component.hcp_rosa.oidc_endpoint_url

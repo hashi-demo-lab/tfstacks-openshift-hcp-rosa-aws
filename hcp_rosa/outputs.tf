@@ -14,7 +14,10 @@ output "cluster_admin_username" {
   sensitive   = false
 }
 
-
+output "cluster_oauth_url" {
+  description = "URL for the OpenShift OAuth endpoint"
+  value       = data.http.openshift_auth.url
+}
 
 output "cluster_admin_password" {
   value       = nonsensitive(module.hcp.cluster_admin_password)
