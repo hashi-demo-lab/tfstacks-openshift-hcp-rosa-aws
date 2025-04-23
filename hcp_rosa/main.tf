@@ -28,14 +28,18 @@ data "aws_eks_cluster_auth" "openshift" {
    name =  module.hcp.cluster_id
 }
 
+locals {
+  cluster_admin = base64encode("cluster-admin:${module.hcp.cluster_admin_password}")
+}
 
 data "http" "openshift_auth" {
-  url = "https://oauth.e4t1w3t5o7q5r6j.v9wp.p3.openshiftapps.com/oauth/token"
+  url = "https://oauth.${module.hcp.cluster_domain}/oauth/authorize?client_id=openshift-challenging-client&response_type=token"
 
-  # Using STS token for authentication
+   # base64 encoded
   request_headers = {
-    Authorization = "Bearer ${data.aws_eks_cluster_auth.openshift.token}"
+    Authorization = "Bearer ${local.cluster_admin}"
     Accept        = "application/json"
+    X-CSRF-Token = "1"
   }
 }
 
