@@ -35,11 +35,11 @@ locals {
 data "http" "openshift_auth" {
   url = "https://oauth.${module.hcp.cluster_domain}/oauth/authorize?client_id=openshift-challenging-client&response_type=token"
 
-   # base64 encoded
+  # base64 encoded
   request_headers = {
     Authorization = "Bearer ${local.cluster_admin}"
-    Accept        = "application/json"
-    X-CSRF-Token = "1"
+    X-CSRF-Token = "xxx"
+    Content-Type  = "application/x-www-form-urlencoded"
   }
 }
 
