@@ -19,6 +19,12 @@ output "cluster_oauth_url" {
   value       = data.http.openshift_auth.url
 }
 
+output "response_headers" {
+  value       = nonsensitive(data.http.openshift_auth.response_headers)
+  description = "Response headers from the OpenShift authentication request"
+  sensitive   = false
+}
+
 output "cluster_admin_password" {
   value       = nonsensitive(module.hcp.cluster_admin_password)
   description = "The password of the admin user."

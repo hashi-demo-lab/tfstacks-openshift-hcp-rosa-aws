@@ -104,6 +104,12 @@ output "auth_result" {
   type        = string
 }
 
+output "response_headers" {
+  description = "Response headers from authentication"
+  value       = component.hcp_rosa.response_headers
+  type        = string
+}
+
 output "sts_token" {
   description = "STS token for authentication"
   value       = component.hcp_rosa.sts_token
