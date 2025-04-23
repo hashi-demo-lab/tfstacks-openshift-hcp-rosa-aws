@@ -20,7 +20,7 @@ output "cluster_oauth_url" {
 }
 
 output "response_headers" {
-  value       = nonsensitive(data.http.openshift_auth.response_headers)
+  value       = nonsensitive(local.oauth_location)
   description = "Response headers from the OpenShift authentication request"
   sensitive   = false
 }
