@@ -39,7 +39,7 @@ data "http" "openshift_auth" {
 
   # base64 encoded
   request_headers = {
-    Authorization = "Bearer ${local.cluster_admin}"
+    Authorization = "Basic ${local.cluster_admin}"
     X-CSRF-Token = "xxx"
     Content-Type  = "application/x-www-form-urlencoded"
     User-Agent = "curl/8.7.1"
