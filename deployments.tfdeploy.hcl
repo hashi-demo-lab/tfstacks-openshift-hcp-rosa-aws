@@ -21,7 +21,7 @@ deployment "openshift_rosa_dev" {
     private_subnets = ["subnet-02212f2302fabd834","subnet-08b9377572491efc9","subnet-0ebd436da0b50aa7b"]
     availability_zones  = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
     cluster_name        = "rosa-dev-cluster"
-    openshift_version   = "4.18.7"
+    openshift_version   = "4.18.9"
     account_role_prefix = "ManagedOpenShift"
     operator_role_prefix = "ManagedOpenShift"
     replicas           = 1
