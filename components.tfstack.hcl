@@ -30,20 +30,20 @@ component "hcp_rosa" {
   }
 }
 
-component "terraform_oidc" {
-  depends_on = [component.hcp_rosa]
+# component "terraform_oidc" {
+#   depends_on = [component.hcp_rosa]
   
-  source = "./k8s-rbac"
+#   source = "./k8s-rbac"
   
-    inputs = {
-      tfc_organization_name = var.tfc_organization_name
-    }
+#     inputs = {
+#       tfc_organization_name = var.tfc_organization_name
+#     }
 
-    providers = {
-      kubernetes = provider.kubernetes.config
-      aws    = provider.aws.configurations
-    }
-}
+#     providers = {
+#       kubernetes = provider.kubernetes.config
+#       aws    = provider.aws.configurations
+#     }
+# }
 
 
 # Outputs
